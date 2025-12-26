@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KVSRIT College Website
+
+This is the official website for Dr. K.V. Subba Reddy Institute of Technology (KVSRIT), built with Next.js, TypeScript, and Tailwind CSS.
+
+## Features
+
+- **Responsive Design**: Fully responsive UI for mobile, tablet, and desktop.
+- **Dynamic Content**: News, events, and faculty directory.
+- **Academics**: Course listings, syllabi, and academic calendars.
+- **Admissions**: Application process, eligibility criteria, and online inquiry form.
+- **Admin Portal**: Secure area for managing website content (stubbed).
+- **Performance**: Optimized for speed and SEO using Next.js App Router and Server Components.
+- **Accessibility**: WCAG 2.1 AA compliant.
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Deployment**: Docker, CI/CD with GitHub Actions
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-org/kvsrit-website.git
+   cd kvsrit-website
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser.
+
+## Build and Production
+
+To build the application for production:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To run the production server locally:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Docker Support
 
-## Learn More
+Build the Docker image:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+docker build -t kvsrit-website .
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run the container:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+docker run -p 3000:3000 kvsrit-website
+```
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `src/app`: App Router pages and layouts.
+- `src/components`: Reusable UI components.
+- `public`: Static assets (images, fonts).
+- `.github/workflows`: CI/CD configuration.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Admin Portal
+
+Access the admin portal at `/admin`.
+**Default Credentials (Demo):**
+- Email: `admin@drkvsrit.ac.in`
+- Password: `admin`
+
+## License
+
+[MIT](LICENSE)
