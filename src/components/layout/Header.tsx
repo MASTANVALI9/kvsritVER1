@@ -20,8 +20,8 @@ const Header = () => {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { 
-      name: 'Academics', 
+    {
+      name: 'Academics',
       href: '/academics',
       dropdown: [
         { name: 'Overview', href: '/academics' },
@@ -42,6 +42,7 @@ const Header = () => {
     { name: 'Facilities', href: '/facilities' },
     { name: 'Events', href: '/events' },
     { name: 'Contact', href: '/contact' },
+
   ];
 
   return (
@@ -66,7 +67,7 @@ const Header = () => {
             {navItems.map((item) => (
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
-                  <button 
+                  <button
                     className="text-gray-700 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1 focus:outline-none"
                     onClick={() => toggleDropdown(item.name)}
                   >
@@ -74,7 +75,7 @@ const Header = () => {
                     <ChevronDown size={16} />
                   </button>
                 ) : (
-                  <Link 
+                  <Link
                     href={item.href}
                     className="text-gray-700 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
@@ -101,8 +102,8 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <Link 
-              href="/admissions/apply" 
+            <Link
+              href="/admissions/apply"
               className="bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-800 transition-colors shadow-sm"
             >
               Apply Now

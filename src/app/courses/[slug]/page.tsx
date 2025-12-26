@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const category = await getCourseCategoryBySlug(slug);
   if (!category) return { title: 'Program Not Found' };
-  
+
   return {
     title: `${category.title} - KVSRIT Academics`,
     description: category.description,
@@ -48,16 +48,16 @@ export default async function CourseCategoryPage({ params }: { params: Promise<{
 
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          
+
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
-            
+
             {/* Program Details */}
             <section className="bg-white rounded-xl shadow-sm p-8 border border-gray-100">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
                 <BookOpen className="text-blue-600" /> Program Overview
               </h2>
-              
+
               <div className="flex items-center gap-4 mb-6 text-gray-600">
                 <div className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-lg">
                   <Clock size={18} />
@@ -78,15 +78,21 @@ export default async function CourseCategoryPage({ params }: { params: Promise<{
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Available Specializations</h2>
               <div className="grid gap-4">
                 {category.courses.map((course, idx) => (
-                  <div key={idx} className="p-4 border border-gray-100 rounded-lg hover:border-blue-200 hover:bg-blue-50 transition-colors flex items-center justify-between group">
-                    <div>
-                      <h3 className="font-semibold text-gray-900">{course.name}</h3>
-                      <span className="text-sm text-gray-500 font-mono bg-gray-100 px-2 py-0.5 rounded mt-1 inline-block">
-                        Code: {course.code}
-                      </span>
+                  <Link
+                    key={idx}
+                    href={`/departments/${course.code.toLowerCase()}`}
+                    className="block"
+                  >
+                    <div className="p-4 border border-gray-100 rounded-lg hover:border-blue-200 hover:bg-blue-50 transition-colors flex items-center justify-between group">
+                      <div>
+                        <h3 className="font-semibold text-gray-900">{course.name}</h3>
+                        <span className="text-sm text-gray-500 font-mono bg-gray-100 px-2 py-0.5 rounded mt-1 inline-block">
+                          Code: {course.code}
+                        </span>
+                      </div>
+                      <ChevronRight className="text-gray-400 group-hover:text-blue-600 transition-colors" />
                     </div>
-                    <ChevronRight className="text-gray-400 group-hover:text-blue-600 transition-colors" />
-                  </div>
+                  </Link>
                 ))}
               </div>
             </section>
@@ -95,7 +101,7 @@ export default async function CourseCategoryPage({ params }: { params: Promise<{
 
           {/* Sidebar */}
           <div className="lg:col-span-1 space-y-8">
-            
+
             {/* Quick Facts / Benefits */}
             <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
               <h3 className="text-lg font-bold text-gray-900 mb-4 border-b pb-2">Why Choose This Program?</h3>
@@ -121,8 +127,8 @@ export default async function CourseCategoryPage({ params }: { params: Promise<{
               <p className="text-blue-100 mb-6">
                 Start your journey with KVSRIT today. Applications are open for the upcoming academic year.
               </p>
-              <Link 
-                href="/admissions/apply" 
+              <Link
+                href="/admissions/apply"
                 className="inline-block bg-white text-blue-600 font-bold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors w-full"
               >
                 Apply Now

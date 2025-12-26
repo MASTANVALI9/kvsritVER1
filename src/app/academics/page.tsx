@@ -8,7 +8,7 @@ const programs = {
     title: "B.Tech (Bachelor of Technology)",
     description: "4-Year Undergraduate Degree Program",
     courses: [
-      { name: "Computer Science and Engineering (CSE)", code: "CSE" },
+      { name: "Computer Science and Engineering (CSE)", code: "CSE", },
       { name: "Electronics and Communication Engineering (ECE)", code: "ECE" },
       { name: "Electrical and Electronics Engineering (EEE)", code: "EEE" },
       { name: "Civil Engineering", code: "CE" },
