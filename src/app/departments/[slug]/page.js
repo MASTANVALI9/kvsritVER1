@@ -9,7 +9,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }) {
   const { slug } = await params;
   const dept = await getDepartmentBySlug(slug);
   if (!dept) return { title: 'Department Not Found' };
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function DepartmentPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function DepartmentPage({ params }) {
   const { slug } = await params;
   const dept = await getDepartmentBySlug(slug);
 

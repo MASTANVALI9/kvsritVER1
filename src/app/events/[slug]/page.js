@@ -10,7 +10,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }) {
   const { slug } = await params;
   const event = await getEventBySlug(slug);
   if (!event) return { title: 'Event Not Found' };
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function EventPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function EventPage({ params }) {
   const { slug } = await params;
   const event = await getEventBySlug(slug);
 

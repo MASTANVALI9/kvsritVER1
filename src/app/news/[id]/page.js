@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Calendar, Tag, ArrowLeft } from 'lucide-react';
 
 // This would normally come from a database or API based on the ID
-const getNewsItem = (id: string) => {
+const getNewsItem = (id) => {
   return {
     id,
     title: 'Aditya Birla Capital Campus Recruitment Drive',
@@ -18,7 +18,7 @@ const getNewsItem = (id: string) => {
   };
 };
 
-export default async function NewsDetailPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function NewsDetailPage({ params }) {
   const { id } = await params;
   const newsItem = getNewsItem(id);
 

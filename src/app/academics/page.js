@@ -48,10 +48,8 @@ const programs = {
   }
 };
 
-type ProgramKey = keyof typeof programs;
-
 export default function AcademicsPage() {
-  const [activeTab, setActiveTab] = useState<ProgramKey>("btech");
+  const [activeTab, setActiveTab] = useState("btech");
 
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -70,7 +68,7 @@ export default function AcademicsPage() {
         
         {/* Tabs */}
         <div className="flex flex-wrap gap-2 mb-8 border-b border-gray-200">
-          {(Object.keys(programs) as ProgramKey[]).map((key) => (
+          {Object.keys(programs).map((key) => (
             <button
               key={key}
               onClick={() => setActiveTab(key)}

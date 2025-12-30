@@ -8,7 +8,7 @@ export default function AdminLogin() {
   const [password, setPassword] = useState('');
   const router = useRouter();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = (e) => {
     e.preventDefault();
     // Demo login logic
     if (email === 'admin@drkvsrit.ac.in' && password === 'admin') {

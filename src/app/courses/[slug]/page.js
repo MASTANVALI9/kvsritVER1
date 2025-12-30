@@ -10,7 +10,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }) {
   const { slug } = await params;
   const category = await getCourseCategoryBySlug(slug);
   if (!category) return { title: 'Program Not Found' };
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function CourseCategoryPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function CourseCategoryPage({ params }) {
   const { slug } = await params;
   const category = await getCourseCategoryBySlug(slug);
 
