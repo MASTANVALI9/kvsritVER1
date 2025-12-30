@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const dept = await getDepartmentBySlug(slug);
   if (!dept) return { title: 'Department Not Found' };
-  
+
   return {
     title: `${dept.name} - KVSRIT`,
     description: dept.description,
@@ -47,20 +47,20 @@ export default async function DepartmentPage({ params }) {
 
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          
+
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-12">
-            
+
             {/* Vision & Mission */}
             <section className="bg-white rounded-xl shadow-sm p-8 border border-gray-100">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
                 <Target className="text-blue-600" /> Vision & Mission
               </h2>
-              
+
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">Vision</h3>
                 <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600 italic text-gray-700">
-                  "{dept.vision}"
+                  &quot;{dept.vision}&quot;
                 </div>
               </div>
 
@@ -124,7 +124,7 @@ export default async function DepartmentPage({ params }) {
 
           {/* Sidebar */}
           <div className="lg:col-span-1 space-y-8">
-            
+
             {/* HOD Profile */}
             <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
               <h3 className="text-lg font-bold text-gray-900 mb-4 border-b pb-2">Head of Department</h3>
@@ -138,7 +138,7 @@ export default async function DepartmentPage({ params }) {
                 </div>
               </div>
               <p className="text-sm text-gray-600 italic mb-4">
-                "{dept.hodMessage}"
+                &quot;{dept.hodMessage}&quot;
               </p>
             </div>
 
@@ -161,7 +161,7 @@ export default async function DepartmentPage({ params }) {
                   </div>
                 ))}
                 {dept.faculty.length === 0 && (
-                   <p className="text-sm text-gray-500">Faculty list updating...</p>
+                  <p className="text-sm text-gray-500">Faculty list updating...</p>
                 )}
               </div>
             </div>

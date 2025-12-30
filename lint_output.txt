@@ -1,0 +1,32 @@
+
+> kvsritnew@0.1.0 lint
+> eslint
+
+
+C:\Users\masta\OneDrive\drive\OneDrive\Desktop\programming\Mubtada\kvsritnew\src\app\admin\dashboard\page.js
+  1:57  warning  'PlusCircle' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\masta\OneDrive\drive\OneDrive\Desktop\programming\Mubtada\kvsritnew\src\app\courses\page.js
+  2:10  warning  'BookOpen' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\masta\OneDrive\drive\OneDrive\Desktop\programming\Mubtada\kvsritnew\src\app\departments\[slug]\page.js
+   63:19  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   63:33  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  141:17  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  141:35  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\masta\OneDrive\drive\OneDrive\Desktop\programming\Mubtada\kvsritnew\src\app\events\[slug]\page.js
+  4:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\masta\OneDrive\drive\OneDrive\Desktop\programming\Mubtada\kvsritnew\src\app\news\[id]\page.js
+  2:20  warning  'Tag' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\masta\OneDrive\drive\OneDrive\Desktop\programming\Mubtada\kvsritnew\src\app\news\page.js
+  2:20  warning  'Tag' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\masta\OneDrive\drive\OneDrive\Desktop\programming\Mubtada\kvsritnew\src\app\page.js
+  21:129  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  21:145  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+Γ£û 11 problems (6 errors, 5 warnings)
+

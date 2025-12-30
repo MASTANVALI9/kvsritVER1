@@ -8,7 +8,7 @@ export default function Home() {
       <Hero />
       <Stats />
       <Announcements />
-      
+
       {/* About Section Preview */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,7 +18,7 @@ export default function Home() {
                 Welcome to KVSRIT
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Dr. K.V. Subba Reddy Institute of Technology is promoted by Vaibhav Educational Society (VES) with the motto of "Work is Worship". Its prime objective is to offer Quality Education for the Betterment of Society.
+                Dr. K.V. Subba Reddy Institute of Technology is promoted by Vaibhav Educational Society (VES) with the motto of &quot;Work is Worship&quot;. Its prime objective is to offer Quality Education for the Betterment of Society.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 We persistently seek and adopt innovative methods to improve the quality of higher education on a consistent basis. Our campus provides an environment that fosters intellectual growth and professional development.
@@ -28,10 +28,10 @@ export default function Home() {
               </a>
             </div>
             <div className="mt-10 lg:mt-0 relative h-64 sm:h-72 md:h-96 lg:h-full">
-               {/* Placeholder for About Image */}
-               <div className="w-full h-full bg-gray-200 rounded-lg shadow-lg flex items-center justify-center text-gray-400">
-                  <span className="text-lg">Campus Image Placeholder</span>
-               </div>
+              {/* Placeholder for About Image */}
+              <div className="w-full h-full bg-gray-200 rounded-lg shadow-lg flex items-center justify-center text-gray-400">
+                <span className="text-lg">Campus Image Placeholder</span>
+              </div>
             </div>
           </div>
         </div>
