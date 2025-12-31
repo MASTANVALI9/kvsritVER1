@@ -54,6 +54,14 @@ export const departments = [
         description: 'Developing smart solutions for real-world problems.'
       }
     ],
+    resources: [
+      { id: 'res1', title: 'CSE Syllabus 2024-25', category: 'Syllabus', link: '#' },
+      { id: 'res2', title: 'Data Structures Question Bank', category: 'Previous Paper', link: '#' },
+    ],
+    timetables: [
+      { id: 'tt1', title: '2nd Year Sec-A Timetable', year: '2nd Year', semester: '1st Sem', link: '#' },
+      { id: 'tt2', title: '3rd Year Sec-B Timetable', year: '3rd Year', semester: '1st Sem', link: '#' },
+    ],
     image: '/images/cse-dept.jpg'
   },
   {
@@ -72,6 +80,8 @@ export const departments = [
     faculty: [],
     curriculum: [],
     researchAreas: [],
+    resources: [],
+    timetables: [],
     image: '/images/ece-dept.jpg'
   },
   {
@@ -90,6 +100,8 @@ export const departments = [
     faculty: [],
     curriculum: [],
     researchAreas: [],
+    resources: [],
+    timetables: [],
     image: '/images/eee-dept.jpg'
   },
   {
@@ -108,6 +120,8 @@ export const departments = [
     faculty: [],
     curriculum: [],
     researchAreas: [],
+    resources: [],
+    timetables: [],
     image: '/images/ce-dept.jpg'
   },
   {
@@ -126,6 +140,8 @@ export const departments = [
     faculty: [],
     curriculum: [],
     researchAreas: [],
+    resources: [],
+    timetables: [],
     image: '/images/me-dept.jpg'
   }
 ];

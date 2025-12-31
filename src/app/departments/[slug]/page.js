@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { getDepartmentBySlug, getDepartments } from '@/lib/data';
-import { User, Book, Target, Award, Mail, ChevronRight } from 'lucide-react';
+import { User, Book, Target, Award, Mail, ChevronRight, FileText, Clock, Download } from 'lucide-react';
 
 export async function generateStaticParams() {
   const departments = await getDepartments();
@@ -92,6 +92,65 @@ export default async function DepartmentPage({ params }) {
                       <p className="text-sm text-gray-600">{area.description}</p>
                     </div>
                   ))}
+                </div>
+              </section>
+            )}
+
+            {/* Resources Section */}
+            {dept.resources.length > 0 && (
+              <section className="bg-white rounded-xl shadow-sm p-8 border border-gray-100">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                  <FileText className="text-blue-600" /> Academic Resources
+                </h2>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {dept.resources.map((res) => (
+                    <a
+                      key={res.id}
+                      href={res.link}
+                      className="flex items-center justify-between p-4 rounded-lg border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition-all group"
+                    >
+                      <div>
+                        <div className="font-semibold text-gray-900">{res.title}</div>
+                        <div className="text-xs text-blue-600 font-medium px-2 py-0.5 bg-blue-100 rounded-full inline-block mt-1">
+                          {res.category}
+                        </div>
+                      </div>
+                      <Download size={18} className="text-gray-400 group-hover:text-blue-600" />
+                    </a>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Timetables Section */}
+            {dept.timetables.length > 0 && (
+              <section className="bg-white rounded-xl shadow-sm p-8 border border-gray-100">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                  <Clock className="text-blue-600" /> Department Timetables
+                </h2>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left">
+                    <thead>
+                      <tr className="border-b border-gray-100">
+                        <th className="py-3 font-semibold text-gray-900">Year/Sem</th>
+                        <th className="py-3 font-semibold text-gray-900">Schedule Name</th>
+                        <th className="py-3 text-right font-semibold text-gray-900">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-50">
+                      {dept.timetables.map((tt) => (
+                        <tr key={tt.id} className="hover:bg-gray-50 transition-colors">
+                          <td className="py-4 text-sm text-gray-600">{tt.year} - {tt.semester}</td>
+                          <td className="py-4 font-medium text-gray-900">{tt.title}</td>
+                          <td className="py-4 text-right">
+                            <a href={tt.link} className="text-blue-600 hover:text-blue-800 text-sm font-semibold flex items-center justify-end gap-1">
+                              View <ChevronRight size={14} />
+                            </a>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </section>
             )}

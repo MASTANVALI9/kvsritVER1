@@ -15,8 +15,8 @@ const slides = [
     ),
     description:
       "Dr. K.V. Subba Reddy Institute of Technology (KVSRIT) offers world-class education with state-of-the-art infrastructure and a commitment to excellence in engineering and management.",
-    overlayColor: "from-blue-900 to-blue-800",
-    image: null, // Placeholder for future image upload
+    overlayColor: "from-blue-900/40 to-blue-800/40",
+    image: "/images/hero/hero-1.png",
   },
   {
     id: 2,
@@ -28,8 +28,8 @@ const slides = [
     ),
     description:
       "Join a community dedicated to pushing the boundaries of knowledge. Our expert faculty and modern labs provide the perfect environment for your academic growth.",
-    overlayColor: "from-indigo-900 to-purple-900",
-    image: null,
+    overlayColor: "from-indigo-900/40 to-purple-900/40",
+    image: "/images/hero/hero-2.png",
   },
   {
     id: 3,
@@ -41,8 +41,8 @@ const slides = [
     ),
     description:
       "Experience a holistic development journey with diverse cultural events, sports, and student clubs that shape your personality beyond academics.",
-    overlayColor: "from-blue-800 to-cyan-900",
-    image: null,
+    overlayColor: "from-blue-800/40 to-cyan-900/40",
+    image: "/images/hero/extra-1.png",
   },
 ];
 
@@ -75,10 +75,21 @@ const Hero = () => {
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === current ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
         >
-          {/* Background Gradient or Image */}
+          {slide.image && (
+            <div
+              className="absolute inset-0 w-full h-full -z-10"
+              style={{
+                backgroundImage: `url(${slide.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            />
+          )}
+
           <div
-            className={`absolute inset-0 bg-gradient-to-r ${slide.overlayColor} opacity-90`}
-          ></div>
+            className={`absolute inset-0 bg-black/40 bg-gradient-to-r ${slide.overlayColor} mix-blend-multiply`}
+          />
 
           {/* Pattern Overlay (Optional) */}
           <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
@@ -138,8 +149,8 @@ const Hero = () => {
             key={index}
             onClick={() => setCurrent(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${index === current
-                ? "bg-white w-8"
-                : "bg-white/50 hover:bg-white/80"
+              ? "bg-white w-8"
+              : "bg-white/50 hover:bg-white/80"
               }`}
             aria-label={`Go to slide ${index + 1}`}
           />
