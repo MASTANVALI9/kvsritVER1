@@ -92,7 +92,7 @@ const Hero = () => {
           />
 
           {/* Pattern Overlay (Optional) */}
-          <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
+          <div className="absolute inset-0 bg-black/5 opacity-10"></div>
 
           {/* If you have an image, you can use Next.js Image component here like:
              <Image src={slide.image} alt="Background" fill className="object-cover -z-10 mix-blend-overlay" />

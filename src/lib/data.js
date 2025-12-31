@@ -62,7 +62,7 @@ export const departments = [
       { id: 'tt1', title: '2nd Year Sec-A Timetable', year: '2nd Year', semester: '1st Sem', link: '#' },
       { id: 'tt2', title: '3rd Year Sec-B Timetable', year: '3rd Year', semester: '1st Sem', link: '#' },
     ],
-    image: '/images/cse-dept.jpg'
+    image: '/images/hero/hero-1.png'
   },
   {
     id: '2',
@@ -82,7 +82,7 @@ export const departments = [
     researchAreas: [],
     resources: [],
     timetables: [],
-    image: '/images/ece-dept.jpg'
+    image: '/images/hero/hero-2.png'
   },
   {
     id: '3',
@@ -102,7 +102,7 @@ export const departments = [
     researchAreas: [],
     resources: [],
     timetables: [],
-    image: '/images/eee-dept.jpg'
+    image: '/images/hero/extra-1.png'
   },
   {
     id: '4',
@@ -162,11 +162,8 @@ export const events = [
       'To facilitate networking with industry experts.'
     ],
     registrationLink: 'https://forms.gle/example',
-    gallery: [
-      '/images/events/techfest1.jpg',
-      '/images/events/techfest2.jpg'
-    ],
-    thumbnail: '/images/events/techfest-thumb.jpg'
+    gallery: [],
+    thumbnail: null
   },
   {
     id: '2',
@@ -183,7 +180,7 @@ export const events = [
     ],
     registrationLink: 'https://forms.gle/workshop',
     gallery: [],
-    thumbnail: '/images/events/ai-workshop.jpg'
+    thumbnail: null
   }
 ];
 
