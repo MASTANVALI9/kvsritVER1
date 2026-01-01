@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BookOpen, ChevronRight, GraduationCap } from 'lucide-react';
+import { ChevronRight, GraduationCap } from 'lucide-react';
 import { getCourseCategories } from '@/lib/data';
 
 export const metadata = {
@@ -22,8 +22,8 @@ export default async function CoursesPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {categories.map((category) => (
-            <Link 
-              key={category.id} 
+            <Link
+              key={category.id}
               href={`/courses/${category.slug}`}
               className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col"
             >
@@ -31,11 +31,11 @@ export default async function CoursesPage() {
                 <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform duration-300">
                   <GraduationCap size={32} />
                 </div>
-                
+
                 <h2 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   {category.title}
                 </h2>
-                
+
                 <p className="text-gray-600 mb-6 line-clamp-2">
                   {category.description}
                 </p>
@@ -54,7 +54,7 @@ export default async function CoursesPage() {
                   )}
                 </div>
               </div>
-              
+
               <div className="bg-gray-50 px-8 py-4 border-t border-gray-100 flex items-center justify-between text-blue-600 font-medium group-hover:bg-blue-600 group-hover:text-white transition-colors">
                 <span>View Program Details</span>
                 <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />

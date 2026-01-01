@@ -1,5 +1,4 @@
 import { ArrowRight, GraduationCap, Users, Heart, Award, MapPin } from 'lucide-react';
-import Link from 'next/link';
 
 export const metadata = {
     title: "Alumni | KVSRIT",

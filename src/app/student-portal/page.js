@@ -6,8 +6,6 @@ import {
     ClipboardList,
     Bell,
     CreditCard,
-    Users,
-    Award,
     Clock,
     ArrowRight,
     GraduationCap,
