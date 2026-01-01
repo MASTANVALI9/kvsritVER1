@@ -1,4 +1,3 @@
-
 export const departments = [
   {
     id: '1',
@@ -6,8 +5,8 @@ export const departments = [
     name: 'Computer Science and Engineering',
     code: 'CSE',
     description: 'The Department of Computer Science and Engineering was established to provide world-class education in computing and technology. We aim to produce globally competent professionals.',
-    hodName: 'Dr.G MD. GULZAR ',
-    hodMessage: 'Welcome to the CSE Department. We strive for excellence in education and research.',
+    hodName: 'Dr. C Mohammed Gulzar',
+    hodMessage: 'Welcome to the CSE Department. Our mission is to empower students with computing knowledge and analytical skills to solve complex problems in the digital age.',
     vision: 'To be a center of excellence in Computer Science and Engineering education and research.',
     mission: [
       'To provide quality education in Computer Science and Engineering.',
@@ -15,44 +14,24 @@ export const departments = [
       'To foster industry-academia interaction.'
     ],
     faculty: [
-      {
-        id: 'f1',
-        name: 'Dr. Jane Doe',
-        designation: 'Professor & HOD',
-        qualification: 'Ph.D. in CSE',
-        specialization: 'Artificial Intelligence',
-        email: 'hod.cse@drkvsrit.ac.in'
-      },
-      {
-        id: 'f2',
-        name: 'Mr. John Smith',
-        designation: 'Associate Professor',
-        qualification: 'M.Tech',
-        specialization: 'Data Science',
-        email: 'john.smith@drkvsrit.ac.in'
-      }
+      { id: 'cse-f1', name: 'Dr. Dhanaraj Cheelu', designation: 'Professor', qualification: 'Ph.D', specialization: 'Computer Science' },
+      { id: 'cse-f2', name: 'Dr. K. Pavan Kumar', designation: 'Professor', qualification: 'Ph.D', specialization: 'Computer Science' },
+      { id: 'cse-f3', name: 'Dr. P. Surya Narayana Babu', designation: 'Professor', qualification: 'Ph.D', specialization: 'Computer Science' },
+      { id: 'cse-f4', name: 'Dr. M. Veeresha', designation: 'Associate Professor', qualification: 'Ph.D', specialization: 'Computer Science' },
+      { id: 'cse-f5', name: 'Dr. C. Mohammed Gulzar', designation: 'Associate Professor & HoD', qualification: 'Ph.D', specialization: 'Computer Science' },
+      { id: 'cse-f6', name: 'Dr. H. Ateeq Ahmed', designation: 'Associate Professor', qualification: 'Ph.D', specialization: 'Computer Science' },
+      { id: 'cse-f7', name: 'Trilik Venkateswarlu', designation: 'Assistant Professor', qualification: 'M.Tech', specialization: 'Computer Science' },
+      { id: 'cse-f8', name: 'A. Emmanuel Raju', designation: 'Assistant Professor', qualification: 'M.Tech', specialization: 'Computer Science' },
+      { id: 'cse-f9', name: 'P. Pradeep Kumar', designation: 'Assistant Professor', qualification: 'M.Tech', specialization: 'Computer Science' },
+      { id: 'cse-f10', name: 'G. Sreenivasulu', designation: 'Assistant Professor', qualification: 'M.Tech', specialization: 'Computer Science' }
     ],
     curriculum: [
-      {
-        semester: '1st Semester',
-        subjects: ['Mathematics I', 'Programming for Problem Solving', 'Engineering Physics']
-      },
-      {
-        semester: '2nd Semester',
-        subjects: ['Mathematics II', 'Data Structures', 'Engineering Chemistry']
-      }
+      { semester: '1st Semester', subjects: ['Mathematics I', 'Programming for Problem Solving', 'Engineering Physics'] },
+      { semester: '2nd Semester', subjects: ['Mathematics II', 'Data Structures', 'Engineering Chemistry'] }
     ],
     researchAreas: [
-      {
-        id: 'r1',
-        title: 'Artificial Intelligence',
-        description: 'Research in Machine Learning, Deep Learning, and NLP.'
-      },
-      {
-        id: 'r2',
-        title: 'IoT and Embedded Systems',
-        description: 'Developing smart solutions for real-world problems.'
-      }
+      { id: 'r1', title: 'Artificial Intelligence', description: 'Research in Machine Learning, Deep Learning, and NLP.' },
+      { id: 'r2', title: 'IoT and Embedded Systems', description: 'Developing smart solutions for real-world problems.' }
     ],
     resources: [
       { id: 'res1', title: 'CSE Syllabus 2024-25', category: 'Syllabus', link: '#' },
@@ -70,16 +49,25 @@ export const departments = [
     name: 'Electronics and Communication Engineering',
     code: 'ECE',
     description: 'The ECE department focuses on Electronics, Communication, and Signal Processing.',
-    hodName: 'Dr. Alan Turing',
-    hodMessage: 'Innovating the future of communication.',
+    hodName: 'Dr. M.V. Sruthi',
+    hodMessage: 'Leading the way in electronics and next-generation communication systems.',
     vision: 'To produce high-quality Electronics and Communication Engineers.',
     mission: [
       'To impart strong fundamental knowledge.',
       'To facilitate research in emerging technologies.'
     ],
-    faculty: [],
+    faculty: [
+      { id: 'ece-f1', name: 'Dr. M.V. Sruthi', designation: 'Associate Professor & HoD', qualification: 'Ph.D', specialization: 'Signal Processing' },
+      { id: 'ece-f2', name: 'Dr. R. Prabhakar', designation: 'Professor', qualification: 'Ph.D', specialization: 'Communication Systems' },
+      { id: 'ece-f3', name: 'Dr. T. Syed Akheel', designation: 'Professor', qualification: 'Ph.D', specialization: 'VLSI' },
+      { id: 'ece-f4', name: 'P. Jayarami Reddy', designation: 'Assistant Professor', qualification: 'M.Tech', specialization: 'Electronics' },
+      { id: 'ece-f5', name: 'V.R. Shanthi', designation: 'Assistant Professor', qualification: 'M.Tech', specialization: 'ECE' },
+      { id: 'ece-f6', name: 'M. Suneel Kumar', designation: 'Assistant Professor', qualification: 'M.Tech', specialization: 'ECE' }
+    ],
     curriculum: [],
-    researchAreas: [],
+    researchAreas: [
+      { id: 'ece-r1', title: 'VLSI Design', description: 'Research on low power VLSI systems.' }
+    ],
     resources: [],
     timetables: [],
     image: '/images/hero/hero-2.png'
@@ -90,14 +78,19 @@ export const departments = [
     name: 'Electrical and Electronics Engineering',
     code: 'EEE',
     description: 'The EEE department provides a strong foundation in electrical engineering and modern electronics technologies.',
-    hodName: 'Dr. Tesla',
-    hodMessage: 'Empowering the world with energy and innovation.',
+    hodName: 'Dr. M. Madhusudhan Reddy',
+    hodMessage: 'Empowering students to lead in power systems and renewable energy.',
     vision: 'To lead in electrical and electronics engineering education.',
     mission: [
       'To provide technical expertise in electrical systems.',
       'To encourage sustainable energy research.'
     ],
-    faculty: [],
+    faculty: [
+      { id: 'eee-f1', name: 'Dr. M. Madhusudhan Reddy', designation: 'Professor & HoD', qualification: 'Ph.D', specialization: 'Power Systems' },
+      { id: 'eee-f2', name: 'Dr. K. Rajesh', designation: 'Associate Professor', qualification: 'Ph.D', specialization: 'Power Electronics' },
+      { id: 'eee-f3', name: 'V. Nirmala Devi', designation: 'Assistant Professor', qualification: 'M.Tech', specialization: 'EEE' },
+      { id: 'eee-f4', name: 'S. Thirumalaiah', designation: 'Assistant Professor', qualification: 'M.Tech', specialization: 'EEE' }
+    ],
     curriculum: [],
     researchAreas: [],
     resources: [],
@@ -110,14 +103,19 @@ export const departments = [
     name: 'Civil Engineering',
     code: 'CE',
     description: 'The Civil Engineering department is dedicated to creating sustainable infrastructure and shaping the built environment.',
-    hodName: 'Dr. Visvesvaraya',
-    hodMessage: 'Building the nation’s foundation.',
+    hodName: 'Dr. Raj Kumar',
+    hodMessage: 'Engineering the future with sustainable and resilient infrastructure.',
     vision: 'To be a premier department in Civil Engineering.',
     mission: [
       'To create competent civil engineers.',
       'To focus on sustainable infrastructure development.'
     ],
-    faculty: [],
+    faculty: [
+      { id: 'ce-f1', name: 'Dr. Raj Kumar', designation: 'Professor & HoD', qualification: 'Ph.D', specialization: 'Structural Engineering' },
+      { id: 'ce-f2', name: 'Dr. Nagalingeswara Rao', designation: 'Professor', qualification: 'Ph.D', specialization: 'Geo-Technical' },
+      { id: 'ce-f3', name: 'J. Omprakash', designation: 'Associate Professor', qualification: 'M.Tech', specialization: 'Civil' },
+      { id: 'ce-f4', name: 'C. Prasanth', designation: 'Assistant Professor', qualification: 'M.Tech', specialization: 'Civil' }
+    ],
     curriculum: [],
     researchAreas: [],
     resources: [],
@@ -130,19 +128,87 @@ export const departments = [
     name: 'Mechanical Engineering',
     code: 'ME',
     description: 'The Mechanical Engineering department fosters innovation in design, manufacturing, and thermal sciences.',
-    hodName: 'Dr. Watt',
-    hodMessage: 'Driving the wheels of progress.',
+    hodName: 'Dr. J. Kanna Kumar',
+    hodMessage: 'Innovative engineering for a dynamic world.',
     vision: 'To excel in mechanical engineering education and research.',
     mission: [
       'To impart knowledge in design and manufacturing.',
       'To promote interdisciplinary research.'
     ],
-    faculty: [],
+    faculty: [
+      { id: 'me-f1', name: 'Dr. J. Kanna Kumar', designation: 'Professor & HoD', qualification: 'Ph.D', specialization: 'Thermal Engineering' },
+      { id: 'me-f2', name: 'Dr. G. Thirupati Reddy', designation: 'Professor', qualification: 'Ph.D', specialization: 'Manufacturing' },
+      { id: 'me-f3', name: 'K. Venkateswar Reddy', designation: 'Associate Professor', qualification: 'M.Tech', specialization: 'Design' },
+      { id: 'me-f4', name: 'B. Uma Shankar', designation: 'Assistant Professor', qualification: 'M.Tech', specialization: 'CAD/CAM' }
+    ],
     curriculum: [],
     researchAreas: [],
     resources: [],
     timetables: [],
     image: '/images/me-dept.jpg'
+  },
+  {
+    id: '6',
+    slug: 'hs',
+    name: 'Humanities & Sciences',
+    code: 'H&S',
+    description: 'The H&S department provides the foundation for engineering education with mathematics, physics, and communication skills.',
+    hodName: 'Dr. V.P. Geetha Vani',
+    hodMessage: 'Shaping versatile engineers with strong theoretical foundations.',
+    vision: 'To empower students with basic sciences and professional values.',
+    mission: ['To impart foundational knowledge in sciences.', 'To improve communication and soft skills.'],
+    faculty: [
+      { id: 'hs-f1', name: 'Dr. V.P. Geetha Vani', designation: 'Associate Professor & HoD', qualification: 'Ph.D', specialization: 'Mathematics' },
+      { id: 'hs-f2', name: 'G. Ananda Rambabu', designation: 'Assistant Professor', qualification: 'M.Sc', specialization: 'Physics' },
+      { id: 'hs-f3', name: 'J.P. Latha', designation: 'Assistant Professor', qualification: 'MA', specialization: 'English' }
+    ],
+    curriculum: [],
+    researchAreas: [],
+    resources: [],
+    timetables: [],
+    image: '/images/hero/hero-1.png'
+  },
+  {
+    id: '7',
+    slug: 'mba',
+    name: 'Master of Business Administration',
+    code: 'MBA',
+    description: 'Developing leadership and management skills for the corporate world.',
+    hodName: 'Dr. S. Mahaboob Basha',
+    hodMessage: 'Nurturing the next generation of business leaders.',
+    vision: 'To be a leading center for management education.',
+    mission: ['To provide industry-ready management professionals.'],
+    faculty: [
+      { id: 'mba-f1', name: 'Dr. S. Mahaboob Basha', designation: 'Assistant Professor & HoD', qualification: 'Ph.D', specialization: 'Management' },
+      { id: 'mba-f2', name: 'Syed Irfan Ul Haqq', designation: 'Assistant Professor', qualification: 'MBA', specialization: 'Finance' },
+      { id: 'mba-f3', name: 'M. Jhansi Rani', designation: 'Assistant Professor', qualification: 'MBA', specialization: 'HR' }
+    ],
+    curriculum: [],
+    researchAreas: [],
+    resources: [],
+    timetables: [],
+    image: '/images/hero/hero-2.png'
+  },
+  {
+    id: '8',
+    slug: 'mca',
+    name: 'Master of Computer Applications',
+    code: 'MCA',
+    description: 'Advanced studies in computer applications and software development.',
+    hodName: 'Dr. B. Mahesh',
+    hodMessage: 'Excellence in software engineering and application development.',
+    vision: 'To produce highly skilled IT professionals.',
+    mission: ['To provide quality training in software technologies.'],
+    faculty: [
+      { id: 'mca-f1', name: 'Dr. B. Mahesh', designation: 'Professor & HoD', qualification: 'Ph.D', specialization: 'Computer Applications' },
+      { id: 'mca-f2', name: 'M. Khaja Hussain', designation: 'Assistant Professor', qualification: 'MCA', specialization: 'IT' },
+      { id: 'mca-f3', name: 'P. Sree Lakshmi', designation: 'Assistant Professor', qualification: 'MCA', specialization: 'Computer Science' }
+    ],
+    curriculum: [],
+    researchAreas: [],
+    resources: [],
+    timetables: [],
+    image: '/images/hero/extra-1.png'
   }
 ];
 
@@ -266,3 +332,107 @@ export async function getCourseCategories() {
 export async function getCourseCategoryBySlug(slug) {
   return courseCategories.find(c => c.slug === slug);
 }
+
+export const leadership = [
+  {
+    role: 'Chairman',
+    name: 'Dr. K.V. Subba Reddy',
+    designation: 'Founder & Chairman, Vaibhav Educational Society',
+    message: 'Welcome to KVSRIT. Since our inception in 2007, we have been committed to providing top-tier technical education. Our vision is to merge ancient Indian values with modern technological advancements to create engineers who are not only skilled but also socially responsible. We focus on holistic development, ensuring our students are prepared for the global stage.',
+    image: '/images/leadership/chairman.png'
+  },
+  {
+    role: 'Secretary & Correspondent',
+    name: 'Smt. S. Vijayalakshmamma',
+    designation: 'Secretary, Vaibhav Educational Society',
+    message: 'At KVSRIT, we believe that education is the key to unlocking potential. Our goal is to provide an environment that fosters curiosity, discipline, and achievement. We have invested heavily in infrastructure and faculty to ensure that our students have everything they need to succeed in their chosen fields.',
+    image: '/images/leadership/secretary.png'
+  },
+  {
+    role: 'Principal',
+    name: 'Dr. Subba Reddy Borra',
+    designation: 'Principal, KVSRIT',
+    credentials: 'Ph.D. (JNTUH), M.Tech, B.E.',
+    message: 'It is an honor to lead KVSRIT, an institution accredited with NAAC A+. With over 20 years of experience in academia and research, I am proud of our faculty\'s dedication and our students\' achievements. Our curriculum is designed to be industry-relevant, and our focus on research and innovation ensures that we remain at the forefront of technical education.',
+    achievements: [
+      'Authored 10 Technical Books',
+      'Filed 4 Patents',
+      '50+ Research Papers in International Journals',
+      'Recognized Reviewer for Elsevier & Springer'
+    ],
+    image: '/images/leadership/principal.png'
+  }
+];
+
+export const professionalChapters = [
+  {
+    name: 'IEEE Student Branch',
+    description: 'The world\'s largest technical professional organization for the advancement of technology.',
+    activities: ['Technical Workshops', 'Paper Presentations', 'Networking Events'],
+    id: 'ieee'
+  },
+  {
+    name: 'ISTE Chapter',
+    description: 'Indian Society for Technical Education - focusing on teacher and student development.',
+    activities: ['Faculty Development Programs', 'Skill Enhancement', 'Seminars'],
+    id: 'iste'
+  },
+  {
+    name: 'IETE Student Forum',
+    description: 'The Institution of Electronics and Telecommunication Engineers student chapter.',
+    activities: ['Electronics Design Contests', 'Technical Talks', 'Industrial Visits'],
+    id: 'iete'
+  },
+  {
+    name: 'CSI Student Branch',
+    description: 'Computer Society of India - promoting software professional development.',
+    activities: ['Coding Contests', 'App Development Workshops', 'IT Quizzes'],
+    id: 'csi'
+  }
+];
+
+export const qualityAssurance = {
+  naac: {
+    grade: 'A+',
+    cgpa: '3.30',
+    cycle: '1st Cycle',
+    status: 'Accredited'
+  },
+  nba: {
+    departments: ['B.Tech in Computer Science and Engineering'],
+    status: 'Accredited'
+  },
+  iqac: {
+    established: '2015',
+    vision: 'To build and ensure a quality culture at the institutional level.',
+    functions: [
+      'Developing quality benchmarks for academic and administrative activities.',
+      'Facilitating creation of learner-centric environment.',
+      'Arrangement for feedback response from students, parents, and other stakeholders.',
+      'Organization of inter and intra institutional workshops, seminars on quality related themes.'
+    ]
+  }
+};
+
+export const statutoryInfo = {
+  rti: {
+    title: 'Right to Information',
+    description: 'The college complies with the Right to Information Act, 2005. Details regarding the public information officer and appellate authority can be found in the mandatory disclosures.',
+    link: '#'
+  },
+  antiRagging: {
+    title: 'Anti-Ragging Committee',
+    description: 'KVSRIT maintains a zero-tolerance policy towards ragging. We have a robust anti-ragging committee in place to ensure student safety.',
+    tollFree: '1800-180-5522',
+    email: 'antiragging@drkvsrit.ac.in'
+  }
+};
+
+export const contactDirectory = [
+  { department: 'Admissions Office', contact: '+91 91773 17722', email: 'admissions@drkvsrit.ac.in' },
+  { department: 'Exam Cell', contact: '+91 91107 11440', email: 'exams@drkvsrit.ac.in' },
+  { department: 'Placement Cell', contact: '+91 98493 84646', email: 'tpcell@drkvsrit.ac.in' },
+  { department: 'Library', contact: '+91 12345 67894', email: 'library@drkvsrit.ac.in' },
+  { department: 'HOD CSE', contact: '+91 98858 83737', email: 'hod.cse@drkvsrit.ac.in' },
+  { department: 'Admin Office', contact: '+91 08518 285559', email: 'admin@drkvsrit.ac.in' }
+];

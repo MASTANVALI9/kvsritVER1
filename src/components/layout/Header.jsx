@@ -1,12 +1,22 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, GraduationCap } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = (name) => {
@@ -19,14 +29,36 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
+    {
+      name: 'About',
+      href: '/about',
+      dropdown: [
+        { name: 'Our Story', href: '/about' },
+        { name: 'Leadership', href: '/leadership' },
+        { name: 'IQAC', href: '/iqac' },
+        { name: 'Mandatory Disclosures', href: '/mandatory-disclosures' },
+      ]
+    },
     {
       name: 'Academics',
       href: '/academics',
       dropdown: [
         { name: 'Overview', href: '/academics' },
         { name: 'Departments', href: '/departments' },
+        { name: 'Research & Innovation', href: '/research' },
+        { name: 'Library', href: '/library' },
         { name: 'Student Resources', href: '/academics/resources' },
+      ]
+    },
+    {
+      name: 'Campus',
+      href: '/campus-life',
+      dropdown: [
+        { name: 'Campus Life', href: '/campus-life' },
+        { name: 'Student Portal', href: '/student-portal' },
+        { name: 'Alumni', href: '/alumni' },
+        { name: 'Facilities', href: '/facilities' },
+        { name: 'Events', href: '/events' },
       ]
     },
     {
@@ -39,46 +71,47 @@ const Header = () => {
         { name: 'Diploma', href: '/courses/diploma' },
       ]
     },
+    { name: 'Placements', href: '/placements' },
     { name: 'Admissions', href: '/admissions' },
-    { name: 'Facilities', href: '/facilities' },
-    { name: 'Events', href: '/events' },
     { name: 'Contact', href: '/contact' },
-
   ];
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
+      ? 'bg-white/95 backdrop-blur-md shadow-lg'
+      : 'bg-white shadow-md'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                K
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center text-white shadow-lg group-hover:shadow-blue-500/25 transition-shadow">
+                <GraduationCap className="w-7 h-7" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-blue-900 leading-none">KVSRIT</span>
-                <span className="text-xs text-gray-600 font-medium">Dr. K.V. Subba Reddy Institute of Technology</span>
+                <span className="text-xl font-bold text-gray-900 leading-none">KVSRIT</span>
+                <span className="text-xs text-gray-500 font-medium hidden sm:block">Dr. K.V. Subba Reddy Institute of Technology</span>
               </div>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8 items-center">
+          <nav className="hidden lg:flex space-x-1 items-center">
             {navItems.map((item) => (
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
                   <button
-                    className="text-gray-700 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1 focus:outline-none"
+                    className="text-gray-700 hover:text-blue-600 px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-1 focus:outline-none hover:bg-blue-50 transition-colors"
                     onClick={() => toggleDropdown(item.name)}
                   >
                     {item.name}
-                    <ChevronDown size={16} />
+                    <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
                   </button>
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                    className="text-gray-700 hover:text-blue-600 px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-blue-50"
                   >
                     {item.name}
                   </Link>
@@ -86,13 +119,13 @@ const Header = () => {
 
                 {/* Desktop Dropdown */}
                 {item.dropdown && (
-                  <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left">
-                    <div className="py-1" role="menu" aria-orientation="vertical">
+                  <div className="absolute left-0 mt-1 w-56 rounded-xl shadow-xl bg-white ring-1 ring-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left translate-y-2 group-hover:translate-y-0">
+                    <div className="py-2 px-2" role="menu" aria-orientation="vertical">
                       {item.dropdown.map((subItem) => (
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900"
+                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
                           role="menuitem"
                         >
                           {subItem.name}
@@ -105,17 +138,17 @@ const Header = () => {
             ))}
             <Link
               href="/admissions/apply"
-              className="bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-800 transition-colors shadow-sm"
+              className="ml-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-0.5"
             >
               Apply Now
             </Link>
           </nav>
 
           {/* Mobile menu button */}
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center lg:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              className="inline-flex items-center justify-center p-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 focus:outline-none transition-colors"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -126,58 +159,58 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navItems.map((item) => (
-              <div key={item.name}>
-                {item.dropdown ? (
-                  <>
-                    <button
-                      onClick={() => toggleDropdown(item.name)}
-                      className="w-full text-left flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50"
-                    >
-                      {item.name}
-                      <ChevronDown size={16} className={`transform transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
-                    </button>
-                    {activeDropdown === item.name && (
-                      <div className="pl-4 space-y-1">
-                        {item.dropdown.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            className="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-900 hover:bg-gray-50"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50"
-                    onClick={() => setIsMenuOpen(false)}
+      <div className={`lg:hidden transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+        }`}>
+        <div className="bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-1">
+          {navItems.map((item) => (
+            <div key={item.name}>
+              {item.dropdown ? (
+                <>
+                  <button
+                    onClick={() => toggleDropdown(item.name)}
+                    className="w-full text-left flex justify-between items-center px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
                   >
                     {item.name}
-                  </Link>
-                )}
-              </div>
-            ))}
-            <div className="pt-4 pb-2">
-              <Link
-                href="/admissions/apply"
-                className="block w-full text-center px-5 py-3 rounded-md font-medium text-white bg-blue-900 hover:bg-blue-800"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Apply Now
-              </Link>
+                    <ChevronDown size={16} className={`transform transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
+                  </button>
+                  <div className={`overflow-hidden transition-all duration-200 ${activeDropdown === item.name ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}>
+                    <div className="pl-4 space-y-1 py-2">
+                      {item.dropdown.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <Link
+                  href={item.href}
+                  className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              )}
             </div>
+          ))}
+          <div className="pt-4">
+            <Link
+              href="/admissions/apply"
+              className="block w-full text-center px-6 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:shadow-lg transition-shadow"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Apply Now
+            </Link>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 };
