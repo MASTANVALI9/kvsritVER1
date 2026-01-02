@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import {
     Lightbulb,
-    BookOpen,
-    Users,
     Award,
     ArrowRight,
     ExternalLink,
@@ -197,8 +195,8 @@ export default function ResearchPage() {
                                 <div className="p-6">
                                     <div className="flex items-center gap-2 mb-3">
                                         <span className={`text-xs font-semibold px-2 py-1 rounded-full ${project.status === 'Completed' ? 'bg-green-100 text-green-700' :
-                                                project.status === 'Ongoing' ? 'bg-blue-100 text-blue-700' :
-                                                    'bg-amber-100 text-amber-700'
+                                            project.status === 'Ongoing' ? 'bg-blue-100 text-blue-700' :
+                                                'bg-amber-100 text-amber-700'
                                             }`}>
                                             {project.status}
                                         </span>

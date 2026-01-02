@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Calendar, Tag } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 
 const news = [
   {
@@ -66,13 +66,13 @@ export default function NewsPage() {
             <Link key={item.id} href={`/news/${item.id}`} className="block group">
               <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-all h-full flex flex-col">
                 <div className="h-48 bg-gray-200 relative">
-                   {/* Placeholder for Image */}
-                   <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium">
-                      No Image Available
-                   </div>
-                   <div className="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">
-                      {item.category}
-                   </div>
+                  {/* Placeholder for Image */}
+                  <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium">
+                    No Image Available
+                  </div>
+                  <div className="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">
+                    {item.category}
+                  </div>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div className="flex items-center text-gray-500 text-xs mb-3">

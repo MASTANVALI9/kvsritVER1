@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Calendar, Tag, ArrowLeft } from 'lucide-react';
+import { Calendar, ArrowLeft } from 'lucide-react';
 
 // This would normally come from a database or API based on the ID
 const getNewsItem = (id) => {
@@ -28,7 +28,7 @@ export default async function NewsDetailPage({ params }) {
         <Link href="/news" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-8 transition-colors">
           <ArrowLeft size={20} className="mr-2" /> Back to News
         </Link>
-        
+
         <article>
           <div className="mb-6">
             <span className="inline-block bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full mb-4">
@@ -44,11 +44,11 @@ export default async function NewsDetailPage({ params }) {
           </div>
 
           <div className="h-64 md:h-96 bg-gray-200 rounded-lg mb-8 flex items-center justify-center text-gray-400">
-             {/* Placeholder Image */}
-             <span className="text-lg">Featured Image Placeholder</span>
+            {/* Placeholder Image */}
+            <span className="text-lg">Featured Image Placeholder</span>
           </div>
 
-          <div 
+          <div
             className="prose prose-blue prose-lg max-w-none text-gray-700"
             dangerouslySetInnerHTML={{ __html: newsItem.content }}
           />

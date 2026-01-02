@@ -2,8 +2,6 @@ import Link from 'next/link';
 import {
     TrendingUp,
     Building2,
-    Users,
-    Award,
     ArrowRight,
     Briefcase,
     DollarSign,
@@ -209,7 +207,7 @@ export default function PlacementsPage() {
                                         <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
                                     ))}
                                 </div>
-                                <p className="text-gray-300 mb-6 italic">"{story.quote}"</p>
+                                <p className="text-gray-300 mb-6 italic">&quot;{story.quote}&quot;</p>
                                 <div className="flex items-center gap-4">
                                     <div className="w-14 h-14 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold text-lg">
                                         {story.name.split(' ').map(n => n[0]).join('')}

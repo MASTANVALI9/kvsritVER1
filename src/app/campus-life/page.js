@@ -311,7 +311,7 @@ export default function CampusLifePage() {
                         {testimonials.map((testimonial, index) => (
                             <div key={index} className="bg-white rounded-2xl p-8 shadow-lg shadow-gray-100/50 border border-gray-100">
                                 <Quote className="w-10 h-10 text-blue-200 mb-4" />
-                                <p className="text-gray-600 mb-6 italic">"{testimonial.quote}"</p>
+                                <p className="text-gray-600 mb-6 italic">&quot;{testimonial.quote}&quot;</p>
                                 <div className="flex items-center gap-4">
                                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold">
                                         {testimonial.avatar}

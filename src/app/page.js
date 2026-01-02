@@ -2,13 +2,13 @@ import Hero from '@/components/home/Hero';
 import Stats from '@/components/home/Stats';
 import Announcements from '@/components/home/Announcements';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   ArrowRight,
   GraduationCap,
   Users,
   Lightbulb,
   Building2,
-  BookOpen,
   Trophy,
   Calendar,
   ChevronRight
@@ -158,12 +158,14 @@ export default function Home() {
             </div>
 
             <div className="mt-12 lg:mt-0 relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <div className="aspect-[4/3] bg-gradient-to-br from-blue-200 via-indigo-200 to-purple-200 flex items-center justify-center">
-                  <div className="text-center">
-                    <Building2 className="w-24 h-24 text-blue-400 mx-auto mb-4" />
-                    <p className="text-blue-600 font-medium">Campus View</p>
-                  </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-gray-50">
+                <div className="aspect-[4/3] relative">
+                  <Image
+                    src="/images/campus/campus-view.jpg"
+                    alt="KVSRIT Campus View"
+                    fill
+                    className="object-contain transition-transform duration-700 hover:scale-105"
+                  />
                 </div>
               </div>
               {/* Floating Stats Card */}
@@ -211,8 +213,8 @@ export default function Home() {
               >
                 <div className="flex items-center gap-2 mb-4">
                   <span className={`text-xs font-semibold px-3 py-1 rounded-full ${event.category === 'Placements' ? 'bg-emerald-100 text-emerald-700' :
-                      event.category === 'Event' ? 'bg-purple-100 text-purple-700' :
-                        'bg-blue-100 text-blue-700'
+                    event.category === 'Event' ? 'bg-purple-100 text-purple-700' :
+                      'bg-blue-100 text-blue-700'
                     }`}>
                     {event.category}
                   </span>

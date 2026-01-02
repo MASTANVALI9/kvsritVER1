@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ChevronLeft, ChevronRight, Sparkles, Play } from "lucide-react";
 
 const slides = [
@@ -44,7 +45,7 @@ const slides = [
     description:
       "Experience a holistic development journey with diverse cultural events, sports, and student clubs that shape your personality beyond academics.",
     overlayColor: "from-violet-900/70 via-blue-900/60 to-cyan-900/70",
-    image: "images/hero/hero-1.png",
+    image: "/images/hero/hero-1.png",
     accent: "from-cyan-500 to-emerald-400",
   },
 ];
@@ -53,6 +54,13 @@ const Hero = () => {
   const [current, setCurrent] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
+  const handleSlideChange = useCallback((newIndex) => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setCurrent(newIndex);
+    setTimeout(() => setIsAnimating(false), 800);
+  }, [isAnimating]);
+
   // Auto-play functionality
   useEffect(() => {
     const timer = setInterval(() => {
@@ -60,14 +68,7 @@ const Hero = () => {
     }, 6000);
 
     return () => clearInterval(timer);
-  }, [current]);
-
-  const handleSlideChange = (newIndex) => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setCurrent(newIndex);
-    setTimeout(() => setIsAnimating(false), 800);
-  };
+  }, [current, handleSlideChange]);
 
   const nextSlide = () => {
     handleSlideChange(current === slides.length - 1 ? 0 : current + 1);
@@ -96,15 +97,16 @@ const Hero = () => {
             }`}
         >
           {slide.image && (
-            <div
-              className="absolute inset-0 w-full h-full"
-              style={{
-                backgroundImage: `url(${slide.image})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-              }}
-            />
+            <div className="absolute inset-0 w-full h-full">
+              <Image
+                src={slide.image}
+                alt=""
+                fill
+                priority={index === 0}
+                className="object-cover"
+                sizes="100vw"
+              />
+            </div>
           )}
 
           {/* Gradient Overlay */}
