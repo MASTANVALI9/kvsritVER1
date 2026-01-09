@@ -15,16 +15,23 @@ export default function AboutPage() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        
-        {/* History Section */}
+
+        {/* About DRKVSRIT Section */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Our History</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">About DRKVSRIT</h2>
           <div className="prose prose-lg text-gray-600 max-w-none">
             <p>
-              Dr. K.V. Subba Reddy Institute of Technology (KVSRIT) was established in 2007 by Vaibhav Educational Society (VES) under the dynamic leadership of Dr. K.V. Subba Reddy, an eminent educationalist and philanthropist. The institution is situated in Kurnool, Andhra Pradesh, and is affiliated with JNTUA, Anantapur.
+              Dr. K. V. Subba Reddy Institute of Technology is promoted by Vaibhav Educational Society (VES) with the motto of “Work is Worship“. Its prime objective is to offer Quality Education for the Betterment of Society. It persistently seeks and adopts innovative methods to improve the quality of higher education on a consistent basis. The campus has a cosmopolitan atmosphere of attracting students from all corners of Andhra Pradesh. Faculty are continuously encouraged to conduct research, pursue higher education and nurture the students. Our Memoranda of Understanding with various Industries are our major strength. Many of our students, who pursue their jobs in various industries bring high quality to their work and add value and esteem to their organizations. With steady steps, we continue our march forward.
             </p>
-            <p className="mt-4">
-              Since its inception, KVSRIT has been committed to imparting quality technical education to students from diverse backgrounds. The institute is approved by the All India Council for Technical Education (AICTE), New Delhi, and has grown into a premier centre of learning with state-of-the-art infrastructure and highly qualified faculty.
+          </div>
+        </div>
+
+        {/* History Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">History of DRKVSRIT</h2>
+          <div className="prose prose-lg text-gray-600 max-w-none">
+            <p>
+              Established in 2007, DRKVSRIT is affiliated to Jawaharlal Nehru Technological University (JNTU), Ananthapuramu, and is approved by the All India Council for Technical Education (AICTE), New Delhi. The College is headed by its Founder and Chairman, Dr. K. V. Subba Reddy. In recognition of his outstanding service to India in offering quality education, he is conferred with Jewel of India award by Indian Solidarity Council on 13th March 2006. He is also conferred Life Time Achievement Gold Medal Award by International Institute of Education and Management on 13th March 2016. Smt. Vijaya Lakshmamma is the Secretary and Correspondent. Dr.J.KANNA KUMAR is the Principal.
             </p>
           </div>
         </div>
@@ -34,34 +41,34 @@ export default function AboutPage() {
           <div className="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-600">
             <div className="flex items-center gap-3 mb-4">
               <Eye className="text-blue-600 w-8 h-8" />
-              <h3 className="text-2xl font-bold text-gray-900">Our Vision</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Institute Vision</h3>
             </div>
             <p className="text-gray-700 leading-relaxed">
-              To emerge as a premier institution of technical education and research, producing globally competent and ethically strong professionals who can contribute effectively to the sustainable development of society.
+              To be a Global Leader in imparting Quality Technical Education to produce Competent, Technically Innovative Engineers imbibed with Research Aptitude, Entrepreneurship and Social Responsibility.
             </p>
           </div>
-          
+
           <div className="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-600">
             <div className="flex items-center gap-3 mb-4">
               <Target className="text-blue-600 w-8 h-8" />
-              <h3 className="text-2xl font-bold text-gray-900">Our Mission</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Institute Mission</h3>
             </div>
             <ul className="space-y-3 text-gray-700">
               <li className="flex gap-2">
-                <span className="text-blue-600 font-bold">•</span>
-                To provide high-quality education through innovative teaching-learning processes.
+                <span className="text-blue-600 font-bold">1.</span>
+                To nurture the Students with Fundamental Engineering Knowledge enriched with Technical Skills.
               </li>
               <li className="flex gap-2">
-                <span className="text-blue-600 font-bold">•</span>
-                To foster a culture of research, innovation, and entrepreneurship among students and faculty.
+                <span className="text-blue-600 font-bold">2.</span>
+                To create Conducive Environment to nurture Innovation and Interdisciplinary Research.
               </li>
               <li className="flex gap-2">
-                <span className="text-blue-600 font-bold">•</span>
-                To instill ethical values and social responsibility in future engineers.
+                <span className="text-blue-600 font-bold">3.</span>
+                To develop Professionals through Innovative Pedagogy focusing on Individual Growth, Discipline, Integrity, Ethics and Social Responsibility.
               </li>
               <li className="flex gap-2">
-                <span className="text-blue-600 font-bold">•</span>
-                To collaborate with industry and academia for continuous improvement and exposure.
+                <span className="text-blue-600 font-bold">4.</span>
+                To foster Industry-Institution Partnerships Leading to Skill Development and Entrepreneurship.
               </li>
             </ul>
           </div>

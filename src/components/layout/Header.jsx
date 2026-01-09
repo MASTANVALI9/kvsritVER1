@@ -33,21 +33,33 @@ const Header = () => {
       name: 'About',
       href: '/about',
       dropdown: [
-        { name: 'Our Story', href: '/about' },
-        { name: 'Leadership', href: '/leadership' },
-        { name: 'IQAC', href: '/iqac' },
-        { name: 'Mandatory Disclosures', href: '/mandatory-disclosures' },
+        { name: 'About Us', href: '/about' },
+        { name: 'Vision & Mission', href: '/about' },
+        { name: 'Affiliation and Accreditation', href: '/about/affiliation' },
+        { name: 'Management', href: '/leadership' },
+        { name: 'Principal', href: '/leadership' },
+        { name: 'Administration', href: '/about/administration' },
+        { name: 'Governing Body', href: '/about/governing-body' },
+        { name: 'College Academic Committee', href: '/about/academic-committee' },
+        { name: 'Service Rules', href: '/about/service-rules' },
+        { name: 'HR Policies and Strategic Plan', href: '/about/hr-policies' },
+        { name: 'College Organogram', href: '/about/organogram' },
       ]
     },
     {
       name: 'Academics',
       href: '/academics',
       dropdown: [
-        { name: 'Overview', href: '/academics' },
-        { name: 'Departments', href: '/departments' },
-        { name: 'Research & Innovation', href: '/research' },
-        { name: 'Library', href: '/library' },
-        { name: 'Student Resources', href: '/academics/resources' },
+        { name: 'Academic Calender', href: '/academics/calendar' },
+        { name: 'Regulations and Syllabus', href: '/academics/regulations' },
+        { name: 'Exam Cell', href: '/academics/exam-cell' },
+        { name: 'Research and Development Cell', href: '/academics/research' },
+        { name: 'Entrepreneurship Development Cell', href: '/academics/edc' },
+        { name: 'Industry Institute Interaction Cell', href: '/academics/iiic' },
+        { name: 'Governing Body', href: '/about/governing-body' },
+        { name: 'IQAC', href: '/academics/iqac' },
+        { name: 'College Academic Committee', href: '/about/academic-committee' },
+        { name: 'Policies', href: '/academics/policies' },
       ]
     },
     {
@@ -72,7 +84,17 @@ const Header = () => {
       ]
     },
     { name: 'Placements', href: '/placements' },
-    { name: 'Admissions', href: '/admissions' },
+    {
+      name: 'Admissions',
+      href: '/admissions',
+      dropdown: [
+        { name: 'Admissions Procedure', href: '/admissions/procedure' },
+        { name: 'Criteria for Admission', href: '/admissions/criteria' },
+        { name: 'Programs Offered', href: '/admissions/programs' },
+        { name: 'Fee Structure', href: '/admissions/fee-structure' },
+        { name: 'Scholarships', href: '/admissions/scholarships' },
+      ]
+    },
     { name: 'Contact', href: '/contact' },
   ];
 

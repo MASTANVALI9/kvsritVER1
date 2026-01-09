@@ -209,6 +209,26 @@ export const departments = [
     resources: [],
     timetables: [],
     image: '/images/hero/extra-1.png'
+  },
+  {
+    id: '9',
+    slug: 'ai',
+    name: 'Artificial Intelligence',
+    code: 'AI',
+    description: 'The Department of Artificial Intelligence focuses on creating intelligent systems and advanced problem-solving methodologies.',
+    hodName: 'Dr. TBD',
+    hodMessage: 'Welcome to the AI Department. We aim to lead the future of intelligent computing.',
+    vision: 'To be a center of excellence in Artificial Intelligence education and research.',
+    mission: [
+      'To provide cutting-edge education in AI technologies.',
+      'To foster innovation in intelligent systems.'
+    ],
+    faculty: [],
+    curriculum: [],
+    researchAreas: [],
+    resources: [],
+    timetables: [],
+    image: '/images/hero/hero-1.png'
   }
 ];
 
@@ -282,6 +302,7 @@ export const courseCategories = [
       { name: "Civil Engineering", code: "CE" },
       { name: "Mechanical Engineering", code: "ME" },
       { name: "Artificial Intelligence and Machine Learning", code: "AIML" },
+      { name: "Artificial Intelligence (AI)", code: "AI" },
       { name: "Data Science", code: "DS" },
     ]
   },
@@ -338,14 +359,14 @@ export const leadership = [
     role: 'Chairman',
     name: 'Dr. K.V. Subba Reddy',
     designation: 'Founder & Chairman, Vaibhav Educational Society',
-    message: 'Welcome to KVSRIT. Since our inception in 2007, we have been committed to providing top-tier technical education. Our vision is to merge ancient Indian values with modern technological advancements to create engineers who are not only skilled but also socially responsible. We focus on holistic development, ensuring our students are prepared for the global stage.',
+    message: 'In 2007, KVSRIT was founded in Kurnool. It is our unwavering commitment to the highest quality education. I would like to thank the generations of parents who have interested us with the care and education of their children. I believe that education is an important role to play in the progress of a nation DrKVSRIT has the sole objective of promoting ancient Indian values and adopting modern technology in technical education. The students should be made job ready so that the industry knock the doors of our college for campus drives. We create opportunities not just for young people to learn but also to experience the fulfillment that comes from sharing this learning with others.',
     image: '/images/leadership/chairman.png'
   },
   {
     role: 'Secretary & Correspondent',
     name: 'Smt. S. Vijayalakshmamma',
     designation: 'Secretary, Vaibhav Educational Society',
-    message: 'At KVSRIT, we believe that education is the key to unlocking potential. Our goal is to provide an environment that fosters curiosity, discipline, and achievement. We have invested heavily in infrastructure and faculty to ensure that our students have everything they need to succeed in their chosen fields.',
+    message: 'The KVSRIT is well aware that education plays a key role in a student’s life, in acquiring abilities to solve problems, achieve success and lead a fruitful life. I do strongly believe that with the committed efforts of the board of governors, staff, and students. I hope we can all discharge our duties fully to give a better future to our children. At KVSRIT, prepare to be constantly challenged, whether it is in the classroom or outside. You can look forward to being trained by stellar faculty, getting hands-on experience at leading organizations and building enduring bonds with your peers.',
     image: '/images/leadership/secretary.png'
   },
   {
@@ -353,7 +374,7 @@ export const leadership = [
     name: 'Dr. Subba Reddy Borra',
     designation: 'Principal, KVSRIT',
     credentials: 'Ph.D. (JNTUH), M.Tech, B.E.',
-    message: 'It is an honor to lead KVSRIT, an institution accredited with NAAC A+. With over 20 years of experience in academia and research, I am proud of our faculty\'s dedication and our students\' achievements. Our curriculum is designed to be industry-relevant, and our focus on research and innovation ensures that we remain at the forefront of technical education.',
+    message: 'Engineering represents a vital human endeavor, focused on the creation of new artifacts, algorithms, processes, and systems that serve the needs of society. The role of an engineer is to innovate and to bring into existence that which has not yet been realized. Pursuing an education in engineering is a significant privilege. At Dr. K.V. Subba Reddy Institute of Technology(AUTONOMOUS), our vision is to become a global leader in providing quality technical education. We aim to produce competent, technically innovative engineers equipped with research aptitude, a spirit of entrepreneurship, and a strong sense of social responsibility. I am committed to integrating my experience in education with the collective efforts of the faculty to develop a robust methodology that nurtures the intellectual growth of our future engineers.',
     achievements: [
       'Authored 10 Technical Books',
       'Filed 4 Patents',
